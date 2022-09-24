@@ -1,0 +1,98 @@
+* {
+  text-align: center;
+  margin: auto;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  border-bottom: 1px solid white;
+  width: 100%;
+}
+
+header img {
+  height: 40px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.33rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 2rem;
+}
+
+main img {
+  border-radius: 50%;
+  width: 33.333%;
+}
+
+body {
+  font-family: "Alatsi", sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  background: black;
+}
+
+.main-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+section h1 {
+  width: fit-content;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.icon-container li {
+  gap: 1em;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  place-items: center;
+}
+.icon-container li img {
+  width: 32px;
+}
+.progress-bar {
+  align-self: flex-end;
+  position: relative;
+  height: 0.7em;
+  width: 10em;
+}
+.progress-bar-fill {
+  position: relative;
+  height: 100%;
+  width: 0;
+  background-color: #fff3e2;
+}
+canvas {
+  width: 100%;
+}
