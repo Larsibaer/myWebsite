@@ -27,52 +27,40 @@
     <main>
     <section>
       <h2>Skills</h2>
-      <ul class="icon-container">
-        <li>
-          <img src="assets/images/html.svg" alt="angular" />
-          <span> HTML </span>
-          <div class="flex-spacer"></div>
-          <div class="progress-bar">
-            <div class="progress-bar-fill" style="width: 60%"></div>
-          </div>
-        </li>
-        <li>
-          <img src="assets/images/css.svg" alt="angular" />
-          <span> CSS </span>
-          <div class="flex-spacer"></div>
-          <div class="progress-bar">
-            <div class="progress-bar-fill" style="width: 50%"></div>
-          </div>
-        </li>
-        <li>
-          <img src="assets/images/javascript.svg" alt="angular" />
-          <span> Javascript </span>
-          <div class="flex-spacer"></div>
-          <div class="progress-bar">
-            <div class="progress-bar-fill" style="width: 40%"></div>
-          </div>
-        </li>
-        <li>
-          <img src="assets/images/GraphQL.png" alt="angular" />
-          <span> GraphQL </span>
-          <div class="flex-spacer"></div>
-          <div class="progress-bar">
-            <div class="progress-bar-fill" style="width: 30%"></div>
-          </div>
-        </li>
-        <li>
-          <img src="assets/images/angular.svg" alt="angular" />
-          <span> Angular </span>
-          <div class="flex-spacer"></div>
-          <div class="progress-bar">
-            <div class="progress-bar-fill" style="width: 10%"></div>
-          </div>
-        </li>
-      </ul>
+      <table class="icon-container">
+        <tr>
+          <td><img src="assets/images/html.svg" alt="angular" width="25px" /></td>
+          <td><label>HTML</label></td>
+          <td><progress value="32" max="100"> 52% </progress></td>
+        </tr>
+        <tr>
+          <td><img src="assets/images/css.svg" alt="angular" /></td>
+          <td><label>CSS</label></td>
+          <td><progress value="32" max="100"> 42% </progress></td>
+        </tr>
+        <tr>
+          <td><img src="assets/images/javascript.svg" alt="angular" /></td>
+          <td><label>Javascript</label></td>
+          <td><progress value="32" max="100"> 36% </progress></td>
+        </tr>
+        <tr>
+          <td><img src="assets/images/GraphQL.png" alt="angular" /></td>
+          <td><label>GraphQL</label></td>
+          <td><progress value="32" max="100"> 32% </progress></td>
+        </tr>
+        <tr>
+          <td><img src="assets/images/angular.svg" alt="angular" /></td>
+          <td><label>Angular</label></td>
+          <td><progress value="32" max="100"> 22% </progress></td>
+        </tr>
+      </table>
+
+
+      
     </section>
     <footer>
       <h1>Test!!!</h1>
-      <p>&copy; 2022</p>
+      <p>&copy; <script>document.write(/\d{4}/.exec(Date())[0])</script></p>
     </footer>
   </body>
 </html>

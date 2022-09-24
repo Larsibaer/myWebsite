@@ -71,28 +71,23 @@ section h1 {
   margin-bottom: 10px;
 }
 
-.icon-container li {
-  gap: 1em;
-  list-style: none;
-  display: flex;
-  justify-content: flex-start;
-  place-items: center;
-}
-.icon-container li img {
+table tr img {
   width: 32px;
 }
-.progress-bar {
-  align-self: flex-end;
-  position: relative;
-  height: 0.7em;
-  width: 10em;
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
-.progress-bar-fill {
-  position: relative;
-  height: 100%;
-  width: 0;
-  background-color: #fff3e2;
+
+td,
+th {
+  padding: 2px;
 }
+
 canvas {
   width: 100%;
 }
