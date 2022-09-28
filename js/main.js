@@ -1,8 +1,9 @@
+//Code From: https://codepen.io/TC5550/pen/WNNWoaO
 var canvas = document.createElement("canvas");
 var width = (canvas.width = window.innerWidth * 0.75);
 var height = (canvas.height = window.innerHeight * 0.75);
+// Codezeile abgeändert
 document.body.getElementsByTagName("canvas")[0].replaceWith(canvas);
-//document.body.appendChild(canvas);
 var gl = canvas.getContext("webgl");
 
 var mouse = { x: 0, y: 0 };

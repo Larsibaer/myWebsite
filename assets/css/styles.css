@@ -11,6 +11,10 @@ header {
   padding: 1.25rem;
   border-bottom: 1px solid white;
   width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  z-index: 1;
 }
 
 header img {
@@ -86,6 +90,7 @@ table {
 td,
 th {
   padding: 2px;
+  padding-right: 20px;
 }
 
 canvas {
