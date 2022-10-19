@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <title>Lars Wenger</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <script type="module" src="js/main.js"></script>
+    <script src="js/main.js"></script>
+    <script type="module" src="js/canvas.js"></script>
   </head>
   <body>
     <header>
       <nav data-auth="true">
-        <a href="./jobs">Jobs</a>
-        <a href="./jobs">Aktuel</a>
-        <a href="./jobs">Informationen</a>
+        <a href="#Job">Job</a>
+        <a href="#Aktuel">Aktuel</a>
+        <a href="#Informationen">Informationen</a>
       </nav>
     </header>
     <main class="main-banner">
@@ -58,8 +59,16 @@
 
       
     </section>
+    <section id="Job">
+      <h1>Job</h1>
+    </section>
+    <section id="Aktuel">
+      <h1>Aktuel</h1>
+    </section>
+    <section id="Informationen">
+      <h1>Informationen</h1>
+    </section>
     <footer>
-      <h1>Test!!!</h1>
       <p>&copy; <script>document.write(/\d{4}/.exec(Date())[0])</script></p>
     </footer>
   </body>

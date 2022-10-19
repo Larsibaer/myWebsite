@@ -11,7 +11,7 @@ header {
   padding: 1.25rem;
   border-bottom: 1px solid white;
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0;
   background-color: black;
   z-index: 1;
@@ -21,7 +21,8 @@ header img {
   height: 40px;
 }
 
-header a {
+header nav button {
+  border: none;
   color: white;
   text-decoration: none;
   margin: 0 0.33rem;
