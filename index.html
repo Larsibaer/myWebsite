@@ -26,7 +26,7 @@
       <!-- Code From: https://codepen.io/TC5550/pen/WNNWoaO -->
     </canvas>
     <main>
-    <section>
+    <article>
       <h2>Skills</h2>
       <table class="icon-container">
         <tr>
@@ -55,11 +55,23 @@
           <td><progress value="32" max="100"> 22% </progress></td>
         </tr>
       </table>
+    </article>
+    <section id="joke">
+      <p>Möchtest du einen bestimmten Witz?</p>
+      <br>
+      <form>
+        <select data-field="geekjoke_categorie" name="jokecategorie" id="jokecategorie" onChange="loadJoke()">
+          <option value='Any', disabled selected>Wähle eine Kategorie:</option>
+            <option value="Programming">Programming</option>
+            <option value="Pun">Wortspiel</option>
+            <option value="Christmas">Weihnachten</option>
+            <option value="Miscellaneous">Verschiedenes</option>
+        </select>
+        <br><br>
 
-
-      <section>
-        <p>Ein Witz: <span data-field="geekjoke"></span></p>
-      </section>
+      </form>
+      <p><span id="joke_setup" data-field="geekjoke_setup"></span></p>
+      <p><span id="joke_delivery" data-field="geekjoke_delivery"></span></p>
     </section>
     <section id="Job">
       <h1>Job</h1>

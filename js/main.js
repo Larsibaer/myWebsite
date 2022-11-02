@@ -1,30 +1,45 @@
-function myDisplayer(obj) {
-  document.querySelector(`[data-field="geekjoke"]`).innerHTML =
-    JSON.parse(obj).joke;
-}
-
-let myPromise = new Promise(function (myResolve, myReject) {
-  const req = new XMLHttpRequest();
-  req.open("GET", "https://geek-jokes.sameerkumar.website/api?format=json");
-  req.onloadend = function () {
-    if (req.status == 200) {
-      document.querySelector(`[data-field="geekjoke"]`).innerHTML =
-        req.response;
-      myResolve(req.response);
-    } else {
-      document.querySelector(`[data-field="geekjoke"]`).innerHTML =
-        "Leider kein Witz vorhanden";
-      myResolve();
-    }
-  };
-  req.send();
-});
-
-myPromise.then(
-  function (value) {
-    myDisplayer(value);
-  },
-  function (error) {
-    myDisplayer(error);
+// Open API: https://sv443.net/jokeapi/v2/
+window.addEventListener("load", loadJoke);
+function loadJoke() {
+  function myDisplayer(obj) {
+    document.querySelector(`[data-field="geekjoke_setup"]`).innerHTML =
+      JSON.parse(obj).setup;
+    document.querySelector(`[data-field="geekjoke_delivery"]`).innerHTML =
+      JSON.parse(obj).delivery;
   }
-);
+
+  jokeCategory = document.querySelector(
+    `[data-field="geekjoke_categorie"]`
+  ).value;
+  jokeCategory = null ? "Any" : jokeCategory;
+
+  function createPromise() {
+    let myPromise = new Promise(function (myResolve, myReject) {
+      const req = new XMLHttpRequest();
+      req.open(
+        "GET",
+        "https://v2.jokeapi.dev/joke/" + jokeCategory + "?lang=de&type=twopart"
+      );
+      req.onloadend = function () {
+        if (req.status == 200) {
+          myResolve(req.response);
+        } else {
+          document.querySelector(`[data-field="geekjoke"]`).innerHTML =
+            "Leider kein Witz vorhanden";
+          myReject();
+        }
+      };
+      req.send();
+    });
+    return myPromise;
+  }
+
+  createPromise().then(
+    function (value) {
+      myDisplayer(value);
+    },
+    function (error) {
+      myDisplayer(error);
+    }
+  );
+}

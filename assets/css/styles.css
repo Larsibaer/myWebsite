@@ -48,6 +48,18 @@ body {
   background: black;
 }
 
+#joke {
+  width: 20rem;
+}
+
+#joke_setup {
+  color: #6b4bed;
+}
+
+#joke_delivery {
+  color: #b373d0;
+}
+
 .main-banner {
   display: flex;
   justify-content: center;
@@ -67,7 +79,25 @@ body {
   width: 100vw;
   height: 100vh;
 }
-
+select {
+  padding: 7px 40px 7px 12px;
+  width: 100%;
+  border: 1px solid #e8eaed;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 1px 3px -2px #9098a9;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  transition: all 150ms ease;
+  color: #5a667f;
+}
+select option {
+  color: black;
+}
+section {
+  width: 75%;
+}
 section h1 {
   width: fit-content;
   color: white;
