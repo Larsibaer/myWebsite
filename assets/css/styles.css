@@ -39,6 +39,14 @@ main {
 main img {
   border-radius: 50%;
   width: 33.333%;
+  transition: border-radius 2s;
+}
+
+main img:hover {
+  border-radius: 15px;
+
+  /* HOVER ON */
+  transition: border-radius 2s;
 }
 
 body {
