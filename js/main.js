@@ -13,12 +13,21 @@ function loadJoke() {
   ).value;
   jokeCategory = null ? "Any" : jokeCategory;
 
+  jokeLanguage = document.querySelector(
+    `[data-field="geekjoke_language"]`
+  ).value;
+  jokeLanguage = null ? "de" : jokeLanguage;
+
   function createPromise() {
     let myPromise = new Promise(function (myResolve, myReject) {
       const req = new XMLHttpRequest();
       req.open(
         "GET",
-        "https://v2.jokeapi.dev/joke/" + jokeCategory + "?lang=de&type=twopart"
+        "https://v2.jokeapi.dev/joke/" +
+          jokeCategory +
+          "?lang=" +
+          jokeLanguage +
+          "&type=twopart"
       );
       req.onloadend = function () {
         if (req.status == 200) {

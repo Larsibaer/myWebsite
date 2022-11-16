@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ede">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <title>Lars Wenger</title>
@@ -57,16 +57,22 @@
       </table>
     </article>
     <section id="joke">
-      <p>Möchtest du einen bestimmten Witz?</p>
+      <h2>Möchtest du einen bestimmten Witz?</h2>
       <br>
       <form>
-        <select data-field="geekjoke_categorie" name="jokecategorie" id="jokecategorie" onChange="loadJoke()">
-          <option value='Any', disabled selected>Wähle eine Kategorie:</option>
+        <select data-field="geekjoke_categorie" onChange="loadJoke()">
+          <option value='Any', disabled selected>Kategorie:</option>
             <option value="Programming">Programming</option>
             <option value="Pun">Wortspiel</option>
             <option value="Christmas">Weihnachten</option>
             <option value="Miscellaneous">Verschiedenes</option>
         </select>
+        
+        <select data-field="geekjoke_language" onChange="loadJoke()">
+          <option value='de', disabled selected>Sprache:</option>
+          <option value="de">German</option>
+          <option value="en">English</option>
+      </select>
         <br><br>
 
       </form>

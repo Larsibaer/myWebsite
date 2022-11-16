@@ -57,7 +57,7 @@ body {
 }
 
 #joke {
-  width: 20rem;
+  width: 25rem;
 }
 
 #joke_setup {
@@ -87,21 +87,25 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
+form {
+  display: flex;
+  flex-wrap: nowrap;
+}
 select {
   padding: 7px 40px 7px 12px;
+  margin: 5px;
   width: 100%;
-  border: 1px solid #e8eaed;
   border-radius: 5px;
   background: white;
-  box-shadow: 0 1px 3px -2px #9098a9;
   cursor: pointer;
   font-family: inherit;
   font-size: 16px;
-  transition: all 150ms ease;
   color: #5a667f;
 }
 select option {
   color: black;
+  text-align: justify;
 }
 section {
   width: 75%;
