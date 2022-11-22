@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <title>Lars Wenger</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="js/main.js"></script>
     <script type="module" src="js/canvas.js"></script>
   </head>
@@ -30,22 +32,22 @@
       <h2>Skills</h2>
       <table class="icon-container">
         <tr>
-          <td><img src="assets/images/html.svg" alt="angular" width="25px" /></td>
+          <td><img src="assets/images/html.svg" alt="HTML" width="25px" /></td>
           <td><label>HTML</label></td>
           <td><progress value="32" max="100"> 52% </progress></td>
         </tr>
         <tr>
-          <td><img src="assets/images/css.svg" alt="angular" /></td>
+          <td><img src="assets/images/css.svg" alt="CSS" /></td>
           <td><label>CSS</label></td>
           <td><progress value="32" max="100"> 42% </progress></td>
         </tr>
         <tr>
-          <td><img src="assets/images/javascript.svg" alt="angular" /></td>
+          <td><img src="assets/images/javascript.svg" alt="Javascript" /></td>
           <td><label>Javascript</label></td>
           <td><progress value="32" max="100"> 36% </progress></td>
         </tr>
         <tr>
-          <td><img src="assets/images/GraphQL.png" alt="angular" /></td>
+          <td><img src="assets/images/GraphQL.png" alt="GraphQL" /></td>
           <td><label>GraphQL</label></td>
           <td><progress value="32" max="100"> 32% </progress></td>
         </tr>
@@ -56,7 +58,7 @@
         </tr>
       </table>
     </article>
-    <section id="joke">
+    <section>
       <h2>Möchtest du einen bestimmten Witz?</h2>
       <br>
       <form>
@@ -81,6 +83,10 @@
     </section>
     <section id="Job">
       <h1>Job</h1>
+      <div id="root"></div>
+      <div>
+        <Chrono items={items} mode="VERTICAL" />
+      </div>
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus commodi aspernatur consequuntur sunt facilis magnam sint, rerum officiis amet ut est repudiandae, provident eveniet sequi alias ipsum possimus eius! Voluptate?</p>
     </section>
     <section id="Aktuel">

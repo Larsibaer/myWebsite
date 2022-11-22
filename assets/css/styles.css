@@ -1,7 +1,13 @@
+:root {
+  --color-primary: #ab79d6;
+  --color-second: #7750eb;
+  --brand-font-weight: 800;
+}
 * {
   text-align: center;
   margin: auto;
   color: white;
+  font-family: system-ui, sans-serif;
 }
 
 header {
@@ -56,16 +62,21 @@ body {
   background: black;
 }
 
-#joke {
-  width: 25rem;
-}
-
 #joke_setup {
-  color: #6b4bed;
+  color: var(--color-primary);
+  font-size: clamp(1.5rem, 1rem + 5vw, 2rem);
+  font-weight: var(--brand-font-weight);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
 }
 
 #joke_delivery {
-  color: #b373d0;
+  color: var(--color-second);
+  font-size: clamp(1.5rem, 1rem + 5vw, 2rem);
+  font-weight: var(--brand-font-weight);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  font-style: italic;
 }
 
 .main-banner {
@@ -91,7 +102,9 @@ body {
 form {
   display: flex;
   flex-wrap: nowrap;
+  width: 25rem;
 }
+
 select {
   padding: 7px 40px 7px 12px;
   margin: 5px;
