@@ -1,7 +1,21 @@
 * {
+  box-sizing: border-box;
   text-align: center;
   margin: auto;
   color: white;
+  font-family: system-ui, sans-serif;
+}
+
+:root {
+  --color-primary: #ab79d6;
+  --color-second: #7750eb;
+  --brand-font-weight: 800;
+}
+
+@media only screen and (max-width: 400px) {
+  canvas {
+    height: 400px;
+  }
 }
 
 header {
@@ -28,6 +42,13 @@ header nav button {
   margin: 0 0.33rem;
 }
 
+header nav a {
+  text-decoration: none;
+  font-weight: bold;
+  justify-content: center;
+  padding: 5px;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -50,22 +71,25 @@ main img:hover {
 }
 
 body {
-  font-family: "Alatsi", sans-serif;
   margin: 0;
   overflow-x: hidden;
   background: black;
 }
 
-#joke {
-  width: 25rem;
-}
-
 #joke_setup {
-  color: #6b4bed;
+  color: var(--color-primary);
+  font-size: clamp(1.5rem, 1rem + 5vw, 2rem);
+  font-weight: var(--brand-font-weight);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
 }
 
 #joke_delivery {
-  color: #b373d0;
+  color: var(--color-second);
+  font-size: clamp(1.5rem, 1rem + 5vw, 2rem);
+  font-weight: var(--brand-font-weight);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
 }
 
 .main-banner {
@@ -91,6 +115,7 @@ body {
 form {
   display: flex;
   flex-wrap: nowrap;
+  width: 25rem;
 }
 select {
   padding: 7px 40px 7px 12px;
@@ -109,6 +134,7 @@ select option {
 }
 section {
   width: 75%;
+  flex: 1 0 auto;
 }
 section h1 {
   width: fit-content;
@@ -138,4 +164,5 @@ th {
 
 canvas {
   width: 100%;
+  height: 600px;
 }
