@@ -1,5 +1,6 @@
-// Open API: https://sv443.net/jokeapi/v2/
 window.addEventListener("load", loadJoke);
+window.addEventListener("load", loadTime);
+
 function loadJoke() {
   function myDisplayer(obj) {
     document.querySelector(`[data-field="geekjoke_setup"]`).innerHTML =
@@ -17,7 +18,7 @@ function loadJoke() {
     `[data-field="geekjoke_language"]`
   ).value;
   jokeLanguage = null ? "de" : jokeLanguage;
-
+  // Open API: https://sv443.net/jokeapi/v2/
   function createPromise() {
     let myPromise = new Promise(function (myResolve, myReject) {
       const req = new XMLHttpRequest();
@@ -51,4 +52,15 @@ function loadJoke() {
       myDisplayer(error);
     }
   );
+}
+function loadTime() {
+  const myAge = moment([1995, 03, 21]);
+  const timeJungschar = moment([2012, 01, 01]);
+  moment.locale("de-ch");
+  document.querySelector(`[data-field="myAge"]`).innerHTML = moment().from(
+    myAge,
+    true
+  );
+  document.querySelector(`[data-field="timeJungschar"]`).innerHTML =
+    moment().from(timeJungschar, true);
 }
