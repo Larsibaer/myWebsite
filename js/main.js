@@ -55,7 +55,6 @@ function loadJoke() {
 }
 
 function loadTime() {
-  moment().format();
   const myAge = moment([1995, 03, 21]);
   const timeJungschar = moment([2012, 01, 01]);
   moment.locale("de-ch");
